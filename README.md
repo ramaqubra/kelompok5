@@ -8,7 +8,7 @@
 3.
 4.
 5.
-6.
+6. Icha anawai (E1E122099)
 7. Ayustina Samudin (E1E12006)
 8. Yabrina Angelika Rantelili (E1E122081)
 9. Laode Ikhwanul Uzlah (E1E122017)
