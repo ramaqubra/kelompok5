@@ -13,7 +13,7 @@
 8.
 9. Laode Ikhwanul Uzlah (E1E122017)
 10. Farras Sida Toruntju(E1E122052)
-11.
+11.Ni Luh Ica Ardini (E1E122130)
 12.
 13.
 14.
