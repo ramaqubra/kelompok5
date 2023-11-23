@@ -16,6 +16,6 @@
 11. Ni Luh Ica Ardini (E1E122130)
 12. .Nurendro Hardjo Judanto(E1E122133)
 13. RAMA QUBRA PUTRA (E1E122136)
-14.
+14. Nur Fadillah (E1E122025)
 15.
 16. Muhammad Raihan Putra Khamil (E1E122070)
