@@ -11,7 +11,7 @@
 6. Laode Ikhwanul Uzlah (E1E122017)
 7. Farras Sida Toruntju(E1E122052)
 8. Ni Luh Ica Ardini (E1E122130)
-9. .Nurendro Hardjo Judanto(E1E122133)
+9. Nurendro Hardjo Judanto(E1E122133)
 10. RAMA QUBRA PUTRA (E1E122136)
 11. Nur Fadillah (E1E122025)
 12. Ariel Djifebrian Arief (E1E122045)
