@@ -9,7 +9,7 @@
 4.
 5.
 6.
-7.
+7. Ayustina Samudin (E1E12006)
 8. Yabrina Angelika Rantelili (E1E122081)
 9. Laode Ikhwanul Uzlah (E1E122017)
 10. Farras Sida Toruntju(E1E122052)
