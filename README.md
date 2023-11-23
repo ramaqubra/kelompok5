@@ -17,5 +17,5 @@
 12. .Nurendro Hardjo Judanto(E1E122133)
 13. RAMA QUBRA PUTRA (E1E122136)
 14. Nur Fadillah (E1E122025)
-15.
+15. Ariel Djifebrian Arief (E1E122045)
 16. Muhammad Raihan Putra Khamil (E1E122070)
