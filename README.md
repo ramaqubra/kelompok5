@@ -7,7 +7,7 @@
 2.
 3.
 4.
-5.Ngawal Muhamad (E1E122129) 
+5. Ngawal Muhamad (E1E122129)
 6. Icha anawai (E1E122099)
 7. Ayustina Samudin (E1E12006)
 8. Yabrina Angelika Rantelili (E1E122081)
