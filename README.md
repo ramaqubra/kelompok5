@@ -15,7 +15,7 @@
 10. Farras Sida Toruntju(E1E122052)
 11. Ni Luh Ica Ardini (E1E122130)
 12.
-13.
+13. RAMA QUBRA PUTRA (E1E122136)
 14.
 15.
 16. Muhammad Raihan Putra Khamil (E1E122070)
