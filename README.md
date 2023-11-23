@@ -10,7 +10,7 @@
 5.
 6.
 7.
-8.
+8. Yabrina Angelika Rantelili (E1E122081)
 9. Laode Ikhwanul Uzlah (E1E122017)
 10. Farras Sida Toruntju(E1E122052)
 11. Ni Luh Ica Ardini (E1E122130)
