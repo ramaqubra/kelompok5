@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2023 at 07:33 AM
+-- Generation Time: Nov 24, 2023 at 02:15 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_kelompok5_pbo`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `aplikasilayananumkm_menu`
+--
+
+CREATE TABLE `aplikasilayananumkm_menu` (
+  `id` bigint(20) NOT NULL,
+  `nama_menu` varchar(255) NOT NULL,
+  `deskripsi` longtext NOT NULL,
+  `harga` decimal(10,2) NOT NULL,
+  `gambar` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `aplikasilayananumkm_menu`
+--
+
+INSERT INTO `aplikasilayananumkm_menu` (`id`, `nama_menu`, `deskripsi`, `harga`, `gambar`) VALUES
+(1, 'Roti Bakarta Cokelat', 'Roti bakar cokelat adalah varian roti yang dicelupkan atau dilapisi dengan cokelat, memberikan rasa manis dan gurih pada roti. Biasanya, roti bakar cokelat memiliki lapisan cokelat yang meleleh dan memberikan pengalaman rasa yang memuaskan.', '28000.00', 'static/assets/imgs/bakartacoklat_1_wXe3Yvz.jpeg'),
+(2, 'Roti Bakarta Green Tea', 'Roti bakar greentea adalah roti yang diolah dengan tambahan bubuk teh hijau, memberikan rasa dan aroma khas teh hijau. Roti ini seringkali memiliki warna hijau yang lembut dan memberikan sentuhan unik dari teh hijau, yang bisa memberikan pengalaman rasa yang segar dan sedikit pahit.', '30000.00', 'static/assets/imgs/bakartagreentea_1_8fV1R2s.jpeg'),
+(3, 'Roti Bakarta Keju', 'Roti bakar keju adalah varian roti yang biasanya dicampur atau dilapisi dengan keju, menciptakan kombinasi rasa gurih dan creamy. Keju yang meleleh pada roti bakar memberikan tambahan kelezatan dan membuatnya menjadi pilihan yang populer di kalangan pecinta keju.', '26000.00', 'static/assets/imgs/bakartakeju_1_P5ORHdQ.jpeg');
 
 -- --------------------------------------------------------
 
@@ -85,7 +108,11 @@ INSERT INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename`) VALU
 (21, 'Can add session', 6, 'add_session'),
 (22, 'Can change session', 6, 'change_session'),
 (23, 'Can delete session', 6, 'delete_session'),
-(24, 'Can view session', 6, 'view_session');
+(24, 'Can view session', 6, 'view_session'),
+(25, 'Can add menu', 7, 'add_menu'),
+(26, 'Can change menu', 7, 'change_menu'),
+(27, 'Can delete menu', 7, 'delete_menu'),
+(28, 'Can view menu', 7, 'view_menu');
 
 -- --------------------------------------------------------
 
@@ -112,7 +139,7 @@ CREATE TABLE `auth_user` (
 --
 
 INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
-(1, 'pbkdf2_sha256$600000$X3MCEoyLjmCiJAFlns9Ml3$G36PTwKW0U4DbdXEWp0f2HesZiCCLhimgggJKMlvyQs=', '2023-11-22 23:48:20.358989', 1, 'admin', '', '', 'ikhwanuluzlahtkj@gmail.com', 1, 1, '2023-11-22 23:45:45.047875');
+(1, 'pbkdf2_sha256$600000$X3MCEoyLjmCiJAFlns9Ml3$G36PTwKW0U4DbdXEWp0f2HesZiCCLhimgggJKMlvyQs=', '2023-11-23 22:37:58.839924', 1, 'admin', '', '', 'ikhwanuluzlahtkj@gmail.com', 1, 1, '2023-11-22 23:45:45.047875');
 
 -- --------------------------------------------------------
 
@@ -155,6 +182,15 @@ CREATE TABLE `django_admin_log` (
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `django_admin_log`
+--
+
+INSERT INTO `django_admin_log` (`id`, `action_time`, `object_id`, `object_repr`, `action_flag`, `change_message`, `content_type_id`, `user_id`) VALUES
+(1, '2023-11-24 01:12:05.630038', '1', 'Roti Bakarta Cokelat', 1, '[{\"added\": {}}]', 7, 1),
+(2, '2023-11-24 01:13:21.674472', '2', 'Roti Bakarta Green Tea', 1, '[{\"added\": {}}]', 7, 1),
+(3, '2023-11-24 01:13:58.080732', '3', 'Roti Bakarta Keju', 1, '[{\"added\": {}}]', 7, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -173,6 +209,7 @@ CREATE TABLE `django_content_type` (
 
 INSERT INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
 (1, 'admin', 'logentry'),
+(7, 'AplikasiLayananUMKM', 'menu'),
 (3, 'auth', 'group'),
 (2, 'auth', 'permission'),
 (4, 'auth', 'user'),
@@ -214,7 +251,9 @@ INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
 (15, 'auth', '0010_alter_group_name_max_length', '2023-11-22 23:42:30.565265'),
 (16, 'auth', '0011_update_proxy_permissions', '2023-11-22 23:42:30.596267'),
 (17, 'auth', '0012_alter_user_first_name_max_length', '2023-11-22 23:42:30.643265'),
-(18, 'sessions', '0001_initial', '2023-11-22 23:42:30.705283');
+(18, 'sessions', '0001_initial', '2023-11-22 23:42:30.705283'),
+(19, 'AplikasiLayananUMKM', '0001_initial', '2023-11-23 22:14:33.101772'),
+(20, 'AplikasiLayananUMKM', '0002_menu_gambar', '2023-11-23 22:14:33.138763');
 
 -- --------------------------------------------------------
 
@@ -229,8 +268,22 @@ CREATE TABLE `django_session` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `django_session`
+--
+
+INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
+('ssv9msk50sgs0248ovm7fi49zsowrkpj', '.eJxVjDEOAiEURO9CbciHhQUs7T0D-cBHVg0ky25lvLuSbKHNFPPezIt53Lfi906rXxI7M8FOv13A-KA6QLpjvTUeW93WJfCh8IN2fm2JnpfD_Tso2Mt3jaQAEEBaMWVLs1FxhMxKg0JnaNIWgjM2R3LgMOYQpEbh5JTlrCN7fwDKrjdz:1r6HzD:PGgwF7mH--621a7MlzFdj8k1TE14rW1EBxhB5dbyEGo', '2023-12-07 22:15:51.495629'),
+('yo3skz81q4pwkhpzw4gtzixv55bkximf', '.eJxVjDEOAiEURO9CbciHhQUs7T0D-cBHVg0ky25lvLuSbKHNFPPezIt53Lfi906rXxI7M8FOv13A-KA6QLpjvTUeW93WJfCh8IN2fm2JnpfD_Tso2Mt3jaQAEEBaMWVLs1FxhMxKg0JnaNIWgjM2R3LgMOYQpEbh5JTlrCN7fwDKrjdz:1r6IKc:LurLuPINHO9lneBmxOl5oHKBeM_8Frem8EaHrIkUc8Y', '2023-12-07 22:37:58.856930');
+
+--
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `aplikasilayananumkm_menu`
+--
+ALTER TABLE `aplikasilayananumkm_menu`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `auth_group`
@@ -310,6 +363,12 @@ ALTER TABLE `django_session`
 --
 
 --
+-- AUTO_INCREMENT for table `aplikasilayananumkm_menu`
+--
+ALTER TABLE `aplikasilayananumkm_menu`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `auth_group`
 --
 ALTER TABLE `auth_group`
@@ -325,7 +384,7 @@ ALTER TABLE `auth_group_permissions`
 -- AUTO_INCREMENT for table `auth_permission`
 --
 ALTER TABLE `auth_permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `auth_user`
@@ -349,19 +408,19 @@ ALTER TABLE `auth_user_user_permissions`
 -- AUTO_INCREMENT for table `django_admin_log`
 --
 ALTER TABLE `django_admin_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `django_content_type`
 --
 ALTER TABLE `django_content_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `django_migrations`
 --
 ALTER TABLE `django_migrations`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Constraints for dumped tables
