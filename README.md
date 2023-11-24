@@ -6,7 +6,7 @@
 1. Ahmad Al Ambiyah(E1E122088)
 2. Ngawal Muhamad (E1E122129)
 3. Icha anawai (E1E122099)
-4. Ayustina Samudin (E1E12006)
+4. Ayustina Samudin (E1E122006)
 5. Yabrina Angelika Rantelili (E1E122081)
 6. Laode Ikhwanul Uzlah (E1E122017)
 7. Farras Sida Toruntju(E1E122052)
