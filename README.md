@@ -16,6 +16,6 @@
 11. Nur Fadillah (E1E122025)
 12. Ariel Djifebrian Arief (E1E122045)
 13. Muhammad Raihan Putra Khamil (E1E122070)
-14. 
+14. Jelti Todingan (E1E122060)
 15.
 16. 
