@@ -15,3 +15,11 @@ def menu(request):
 
 def aishtea(request):
     return base_details(request, AishTea.objects.all(), 'details.html')
+
+# Ni Luh Ica Ardini_E1E122130
+
+def saguku(request):
+    return base_details(request, Saguku.objects.all(), 'details.html')
+
+def wang(request):
+    return base_details(request, Wang.objects.all(), 'details.html')
