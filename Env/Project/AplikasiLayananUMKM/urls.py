@@ -5,8 +5,7 @@ from .views import index, menu, aishtea, saguku, wang
 urlpatterns = [
     path('', views.index, name="index"),
     path('details', views.details, name="details"),
-    
-    # Yabrina Angelika Rantelili_E1E122081
+     # Yabrina Angelika Rantelili_E1E122081
     path('menu/', menu, name='menu'),
     path('aishtea/', aishtea, name='aishtea'),
     path('saguku/', saguku, name='saguku'),
