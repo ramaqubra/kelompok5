@@ -1,16 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-from .models import Menu
+# ICHA ANAWAI_E1E122099
+from .models import Menu, AishTea, Saguku, Wang
 
-def index(request):
-    template = loader.get_template('index.html')
-    return HttpResponse(template.render())
-
-def details(request):
-    menu = Menu.objects.all()
-    template = loader.get_template('details.html')
-    context = {
-        'menu':menu
-    }
-    return HttpResponse(template.render(context,request))
+def base_details(request, queryset, template_name):
+    template = loader.get_template(template_name)
+    context = {'items': queryset}
+    return HttpResponse(template.render(context, request))
