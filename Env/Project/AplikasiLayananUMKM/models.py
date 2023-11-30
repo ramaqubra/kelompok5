@@ -8,3 +8,13 @@ class Menu(models.Model):
 
     def __str__(self):
         return f"{self.nama_menu}"
+
+# Ngawal Muhamad_E1E122129
+class AishTea(Menu):
+    pass
+
+class Saguku(Menu):
+    pass
+
+class Wang(Menu):
+    pass
