@@ -1,3 +1,4 @@
+from django.contrib import admin
 # E1E122025_ NUR FADILLAH
 from .models import Menu, AishTea, Saguku, Wang
 

@@ -3,8 +3,7 @@ from django.urls import path
 from .views import index, menu, aishtea, saguku, wang
 
 urlpatterns = [
-    path('', views.index, name="index"),
-    path('details', views.details, name="details"),
+    path('', index, name="index"),
      # Yabrina Angelika Rantelili_E1E122081
     path('menu/', menu, name='menu'),
     path('aishtea/', aishtea, name='aishtea'),

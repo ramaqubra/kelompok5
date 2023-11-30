@@ -4,6 +4,10 @@ from django.template import loader
 # ICHA ANAWAI_E1E122099
 from .models import Menu, AishTea, Saguku, Wang
 
+def index(request):
+    template = loader.get_template('index.html')
+    return HttpResponse(template.render())
+
 def base_details(request, queryset, template_name):
     template = loader.get_template(template_name)
     context = {'items': queryset}
