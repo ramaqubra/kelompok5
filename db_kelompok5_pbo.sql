@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2023 at 11:05 PM
+-- Generation Time: Dec 06, 2023 at 03:33 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -28,25 +28,6 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `aplikasilayananumkm_aishtea` (
-  `menu_ptr_id` bigint(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `aplikasilayananumkm_aishtea`
---
-
-INSERT INTO `aplikasilayananumkm_aishtea` (`menu_ptr_id`) VALUES
-(15),
-(16),
-(17);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `aplikasilayananumkm_menu`
---
-
-CREATE TABLE `aplikasilayananumkm_menu` (
   `id` bigint(20) NOT NULL,
   `nama_menu` varchar(255) NOT NULL,
   `deskripsi` longtext NOT NULL,
@@ -55,22 +36,36 @@ CREATE TABLE `aplikasilayananumkm_menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `aplikasilayananumkm_menu`
+-- Dumping data for table `aplikasilayananumkm_aishtea`
 --
 
-INSERT INTO `aplikasilayananumkm_menu` (`id`, `nama_menu`, `deskripsi`, `harga`, `gambar`) VALUES
-(12, 'Roti Bakarta Cokelat', 'Roti bakar cokelat adalah varian roti yang dicelupkan atau dilapisi dengan cokelat, memberikan rasa manis dan gurih pada roti. Biasanya, roti bakar cokelat memiliki lapisan cokelat yang meleleh dan memberikan pengalaman rasa yang memuaskan.', '28000.00', 'img/bakartacoklat_1.jpeg'),
-(13, 'Roti Bakarta Green Tea', 'Roti bakar greentea adalah roti yang diolah dengan tambahan bubuk teh hijau, memberikan rasa dan aroma khas teh hijau. Roti ini seringkali memiliki warna hijau yang lembut dan memberikan sentuhan unik dari teh hijau, yang bisa memberikan pengalaman rasa yang segar dan sedikit pahit.', '30000.00', 'img/bakartagreentea_1.jpeg'),
-(14, 'Roti Bakarta Keju', 'Roti bakar keju adalah varian roti yang biasanya dicampur atau dilapisi dengan keju, menciptakan kombinasi rasa gurih dan creamy. Keju yang meleleh pada roti bakar memberikan tambahan kelezatan dan membuatnya menjadi pilihan yang populer di kalangan pecinta keju.', '26000.00', 'img/bakartakeju_1.jpeg'),
-(15, 'AishTea Manis', 'Aishtea adalah minuman yang menyegarkan dan populer di banyak tempat di dunia, terutama di negara-negara tropis. Minuman ini terbuat dari campuran teh yang diseduh dengan air panas, kemudian didinginkan dengan es batu dan sering kali dicampur dengan susu atau pemanis lainnya. Rasanya yang segar dan menyegarkan membuatnya menjadi pilihan yang populer untuk diminum di cuaca panas. Aishtea bisa dinikmati dalam berbagai variasi rasa seperti teh tarik, teh oolong, atau teh hijau yang dikombinasikan dengan berbagai pilihan pemanis dan tambahan lainnya sesuai selera.', '10000.00', 'img/1-_6530beb7b5dcb-es-teh-manis_665_374.jpeg.jpg'),
-(16, 'Fruit Tea Ice', 'Aishtea merupakan minuman yang menyegarkan dan terkenal di banyak belahan dunia, khususnya di daerah tropis. Minuman ini terbuat dari campuran teh yang telah diseduh dengan air panas, kemudian didinginkan dengan es batu. Aishtea seringkali diolah dengan tambahan susu, pemanis seperti gula atau madu, serta dapat diperkaya dengan citra rasa buah-buahan atau rempah untuk memberikan variasi cita rasa yang menarik. Aishtea hadir dalam beragam variasi seperti teh tarik, teh hijau, atau teh hitam yang menjadi pilihan favorit di tengah cuaca yang panas.', '15000.00', 'img/2-_pngtree-fruit-tea-ice-drink-png-image_2214922.jpg'),
-(17, 'Es Teh Manis', 'Es teh adalah minuman yang menyegarkan dan populer di seluruh dunia, terutama saat cuaca sedang panas. Minuman ini terbuat dari teh yang diseduh dengan air panas, kemudian didinginkan dengan es batu. Rasanya yang ringan dan menyegarkan membuatnya menjadi pilihan yang disukai banyak orang. Es teh bisa dinikmati dalam berbagai variasi, mulai dari es teh tawar hingga es teh manis dengan tambahan perasa seperti lemon, madu, atau buah-buahan. Keunikan rasanya membuat es teh menjadi minuman yang cocok untuk dinikmati kapan pun, baik sebagai penyegar di siang hari maupun sebagai teman santai di malam hari.', '5000.00', 'img/3_-_es-teh-manis-1-500x300.jpg'),
-(18, 'Saguku Crispy Brownies', 'Saguku brownies krispi adalah sajian lezat yang berasal dari keindahan Sulawesi Tenggara, Indonesia. Menggabungkan cita rasa khas coklat dengan kelembutan tekstur krispi yang diciptakan oleh sagu, makanan ini menghadirkan pengalaman kuliner yang unik dan memikat.', '18000.00', 'img/1-_sagukucrispy_brownies_sagu.jpg'),
-(19, 'Saguku Biskuit Sagu Coklat', 'Saguku Biskuit Sagu Coklat adalah sajian lezat yang memadukan kelembutan biskuit sagu dengan cita rasa kaya coklat. Produk ini diinspirasi oleh kekayaan alam Indonesia dan tradisi sagu yang melimpah, menciptakan pengalaman rasa yang unik dan memikat.', '18000.00', 'img/2_-_sagukubiskuit_sagu_coklat.jpg'),
-(20, 'Saguku Chips Daun Kelor', 'Saguku Chips Sagu dan Daun Kelor adalah camilan inovatif yang menggabungkan kelezatan sagu dengan manfaat daun kelor. Camilan ini tidak hanya memberikan cita rasa yang renyah dan lezat, tetapi juga memberikan nilai tambah nutrisi karena kandungan daun kelor yang kaya akan nutrisi.', '13000.00', 'img/3_-_sagukuchips_sagu_danukelor.jpeg.jpg'),
-(21, 'Hamburger', 'Hamburger, dengan roti bundar yang kenyal dan lapisan daging gurih di tengahnya, adalah warisan kuliner yang telah menjadi simbol makanan cepat saji. Kombinasi daging, sayuran, keju, dan saus menciptakan perpaduan rasa yang luar biasa.', '8000.00', 'img/intro-1540401194.jpg'),
-(22, 'Fried Chicken', 'Fried Chiken adalah hidangan yang populer di seluruh dunia. Kulitnya yang renyah dan dagingnya yang lezat membuatnya menjadi favorit banyak orang..', '10000.00', 'img/l-intro-1659368501.jpg'),
-(23, 'French Fries', 'French Fries adalah pendamping yang sempurna untuk banyak hidangan. Dengan tekstur luar yang renyah dan bagian dalam yang lembut, kentang goreng telah menjadi favorit di seluruh dunia.', '10500.00', 'img/l-intro-1679437907.jpg');
+INSERT INTO `aplikasilayananumkm_aishtea` (`id`, `nama_menu`, `deskripsi`, `harga`, `gambar`) VALUES
+(1, 'AishTea Manis', 'Aishtea adalah minuman yang menyegarkan dan populer di banyak tempat di dunia, terutama di negara-negara tropis. Minuman ini terbuat dari campuran teh yang diseduh dengan air panas, kemudian didinginkan dengan es batu dan sering kali dicampur dengan susu atau pemanis lainnya. Rasanya yang segar dan menyegarkan membuatnya menjadi pilihan yang populer untuk diminum di cuaca panas. Aishtea bisa dinikmati dalam berbagai variasi rasa seperti teh tarik, teh oolong, atau teh hijau yang dikombinasikan dengan berbagai pilihan pemanis dan tambahan lainnya sesuai selera.', '10000.00', 'img/1-_6530beb7b5dcb-es-teh-manis_665_374.jpeg.jpg'),
+(2, 'Fruit Tea Ice', 'Aishtea merupakan minuman yang menyegarkan dan terkenal di banyak belahan dunia, khususnya di daerah tropis. Minuman ini terbuat dari campuran teh yang telah diseduh dengan air panas, kemudian didinginkan dengan es batu. Aishtea seringkali diolah dengan tambahan susu, pemanis seperti gula atau madu, serta dapat diperkaya dengan citra rasa buah-buahan atau rempah untuk memberikan variasi cita rasa yang menarik. Aishtea hadir dalam beragam variasi seperti teh tarik, teh hijau, atau teh hitam yang menjadi pilihan favorit di tengah cuaca yang panas.', '15000.00', 'img/2-_pngtree-fruit-tea-ice-drink-png-image_2214922.jpg'),
+(3, 'Es Teh Manis', 'Es teh adalah minuman yang menyegarkan dan populer di seluruh dunia, terutama saat cuaca sedang panas. Minuman ini terbuat dari teh yang diseduh dengan air panas, kemudian didinginkan dengan es batu. Rasanya yang ringan dan menyegarkan membuatnya menjadi pilihan yang disukai banyak orang. Es teh bisa dinikmati dalam berbagai variasi, mulai dari es teh tawar hingga es teh manis dengan tambahan perasa seperti lemon, madu, atau buah-buahan. Keunikan rasanya membuat es teh menjadi minuman yang cocok untuk dinikmati kapan pun, baik sebagai penyegar di siang hari maupun sebagai teman santai di malam hari.', '5000.00', 'img/3_-_es-teh-manis-1-500x300.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `aplikasilayananumkm_roti`
+--
+
+CREATE TABLE `aplikasilayananumkm_roti` (
+  `id` bigint(20) NOT NULL,
+  `nama_menu` varchar(255) NOT NULL,
+  `deskripsi` longtext NOT NULL,
+  `harga` decimal(10,2) NOT NULL,
+  `gambar` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `aplikasilayananumkm_roti`
+--
+
+INSERT INTO `aplikasilayananumkm_roti` (`id`, `nama_menu`, `deskripsi`, `harga`, `gambar`) VALUES
+(1, 'Roti Bakarta Cokelat', 'Roti bakar cokelat adalah varian roti yang dicelupkan atau dilapisi dengan cokelat, memberikan rasa manis dan gurih pada roti. Biasanya, roti bakar cokelat memiliki lapisan cokelat yang meleleh dan memberikan pengalaman rasa yang memuaskan.', '28000.00', 'img/bakartacoklat_1.jpeg'),
+(2, 'Roti Bakarta Green Tea', 'Roti bakar greentea adalah roti yang diolah dengan tambahan bubuk teh hijau, memberikan rasa dan aroma khas teh hijau. Roti ini seringkali memiliki warna hijau yang lembut dan memberikan sentuhan unik dari teh hijau, yang bisa memberikan pengalaman rasa yang segar dan sedikit pahit.', '30000.00', 'img/bakartagreentea_1.jpeg'),
+(3, 'Roti Bakarta Keju', 'Roti bakar keju adalah varian roti yang biasanya dicampur atau dilapisi dengan keju, menciptakan kombinasi rasa gurih dan creamy. Keju yang meleleh pada roti bakar memberikan tambahan kelezatan dan membuatnya menjadi pilihan yang populer di kalangan pecinta keju.', '26000.00', 'img/bakartakeju_1.jpeg');
 
 -- --------------------------------------------------------
 
@@ -79,17 +74,21 @@ INSERT INTO `aplikasilayananumkm_menu` (`id`, `nama_menu`, `deskripsi`, `harga`,
 --
 
 CREATE TABLE `aplikasilayananumkm_saguku` (
-  `menu_ptr_id` bigint(20) NOT NULL
+  `id` bigint(20) NOT NULL,
+  `nama_menu` varchar(255) NOT NULL,
+  `deskripsi` longtext NOT NULL,
+  `harga` decimal(10,2) NOT NULL,
+  `gambar` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `aplikasilayananumkm_saguku`
 --
 
-INSERT INTO `aplikasilayananumkm_saguku` (`menu_ptr_id`) VALUES
-(18),
-(19),
-(20);
+INSERT INTO `aplikasilayananumkm_saguku` (`id`, `nama_menu`, `deskripsi`, `harga`, `gambar`) VALUES
+(1, 'Saguku Crispy Brownies', 'Saguku brownies krispi adalah sajian lezat yang berasal dari keindahan Sulawesi Tenggara, Indonesia. Menggabungkan cita rasa khas coklat dengan kelembutan tekstur krispi yang diciptakan oleh sagu, makanan ini menghadirkan pengalaman kuliner yang unik dan memikat.', '18000.00', 'img/1-_sagukucrispy_brownies_sagu.jpg'),
+(2, 'Saguku Biskuit Sagu Coklat', 'Saguku Biskuit Sagu Coklat adalah sajian lezat yang memadukan kelembutan biskuit sagu dengan cita rasa kaya coklat. Produk ini diinspirasi oleh kekayaan alam Indonesia dan tradisi sagu yang melimpah, menciptakan pengalaman rasa yang unik dan memikat.', '18000.00', 'img/2_-_sagukubiskuit_sagu_coklat.jpg'),
+(3, 'Saguku Chips Daun Kelor', 'Saguku Chips Sagu dan Daun Kelor adalah camilan inovatif yang menggabungkan kelezatan sagu dengan manfaat daun kelor. Camilan ini tidak hanya memberikan cita rasa yang renyah dan lezat, tetapi juga memberikan nilai tambah nutrisi karena kandungan daun kelor yang kaya akan nutrisi.', '13000.00', 'img/3_-_sagukuchips_sagu_danukelor.jpeg.jpg');
 
 -- --------------------------------------------------------
 
@@ -98,17 +97,21 @@ INSERT INTO `aplikasilayananumkm_saguku` (`menu_ptr_id`) VALUES
 --
 
 CREATE TABLE `aplikasilayananumkm_wang` (
-  `menu_ptr_id` bigint(20) NOT NULL
+  `id` bigint(20) NOT NULL,
+  `nama_menu` varchar(255) NOT NULL,
+  `deskripsi` longtext NOT NULL,
+  `harga` decimal(10,2) NOT NULL,
+  `gambar` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `aplikasilayananumkm_wang`
 --
 
-INSERT INTO `aplikasilayananumkm_wang` (`menu_ptr_id`) VALUES
-(21),
-(22),
-(23);
+INSERT INTO `aplikasilayananumkm_wang` (`id`, `nama_menu`, `deskripsi`, `harga`, `gambar`) VALUES
+(1, 'Hamburger', 'Hamburger, dengan roti bundar yang kenyal dan lapisan daging gurih di tengahnya, adalah warisan kuliner yang telah menjadi simbol makanan cepat saji. Kombinasi daging, sayuran, keju, dan saus menciptakan perpaduan rasa yang luar biasa.', '8000.00', 'img/intro-1540401194.jpg'),
+(2, 'Fried Chicken', 'Fried Chiken adalah hidangan yang populer di seluruh dunia. Kulitnya yang renyah dan dagingnya yang lezat membuatnya menjadi favorit banyak orang..', '10000.00', 'img/l-intro-1659368501.jpg'),
+(3, 'French Fries', 'French Fries adalah pendamping yang sempurna untuk banyak hidangan. Dengan tekstur luar yang renyah dan bagian dalam yang lembut, kentang goreng telah menjadi favorit di seluruh dunia.', '10500.00', 'img/l-intro-1679437907.jpg');
 
 -- --------------------------------------------------------
 
@@ -190,7 +193,11 @@ INSERT INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename`) VALU
 (37, 'Can add aish tea', 10, 'add_aishtea'),
 (38, 'Can change aish tea', 10, 'change_aishtea'),
 (39, 'Can delete aish tea', 10, 'delete_aishtea'),
-(40, 'Can view aish tea', 10, 'view_aishtea');
+(40, 'Can view aish tea', 10, 'view_aishtea'),
+(41, 'Can add roti', 11, 'add_roti'),
+(42, 'Can change roti', 11, 'change_roti'),
+(43, 'Can delete roti', 11, 'delete_roti'),
+(44, 'Can view roti', 11, 'view_roti');
 
 -- --------------------------------------------------------
 
@@ -217,7 +224,7 @@ CREATE TABLE `auth_user` (
 --
 
 INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
-(1, 'pbkdf2_sha256$600000$X3MCEoyLjmCiJAFlns9Ml3$G36PTwKW0U4DbdXEWp0f2HesZiCCLhimgggJKMlvyQs=', '2023-11-27 10:57:01.990124', 1, 'admin', '', '', 'ikhwanuluzlahtkj@gmail.com', 1, 1, '2023-11-22 23:45:45.047875');
+(1, 'pbkdf2_sha256$600000$X3MCEoyLjmCiJAFlns9Ml3$G36PTwKW0U4DbdXEWp0f2HesZiCCLhimgggJKMlvyQs=', '2023-12-06 14:24:24.495561', 1, 'admin', '', '', 'ikhwanuluzlahtkj@gmail.com', 1, 1, '2023-11-22 23:45:45.047875');
 
 -- --------------------------------------------------------
 
@@ -298,7 +305,19 @@ INSERT INTO `django_admin_log` (`id`, `action_time`, `object_id`, `object_repr`,
 (31, '2023-11-30 21:58:36.710308', '18', 'Saguku Crispy Brownies', 2, '[{\"changed\": {\"fields\": [\"Gambar\"]}}]', 9, 1),
 (32, '2023-11-30 21:59:01.420439', '19', 'Saguku Biskuit Sagu Coklat', 2, '[{\"changed\": {\"fields\": [\"Gambar\"]}}]', 9, 1),
 (33, '2023-11-30 22:01:31.206220', '20', 'Saguku Chips Sagu Daun Kelor', 2, '[{\"changed\": {\"fields\": [\"Gambar\"]}}]', 9, 1),
-(34, '2023-11-30 22:02:29.515865', '20', 'Saguku Chips Daun Kelor', 2, '[{\"changed\": {\"fields\": [\"Nama menu\"]}}]', 9, 1);
+(34, '2023-11-30 22:02:29.515865', '20', 'Saguku Chips Daun Kelor', 2, '[{\"changed\": {\"fields\": [\"Nama menu\"]}}]', 9, 1),
+(35, '2023-12-06 14:25:50.497641', '1', 'Hamburger', 1, '[{\"added\": {}}]', 8, 1),
+(36, '2023-12-06 14:26:29.138394', '2', 'Fried Chicken', 1, '[{\"added\": {}}]', 8, 1),
+(37, '2023-12-06 14:26:54.831110', '3', 'French Fries', 1, '[{\"added\": {}}]', 8, 1),
+(38, '2023-12-06 14:27:59.833248', '1', 'Saguku Crispy Brownies', 1, '[{\"added\": {}}]', 9, 1),
+(39, '2023-12-06 14:28:37.910177', '2', 'Saguku Biskuit Sagu Coklat', 1, '[{\"added\": {}}]', 9, 1),
+(40, '2023-12-06 14:29:01.914647', '3', 'Saguku Chips Daun Kelor', 1, '[{\"added\": {}}]', 9, 1),
+(41, '2023-12-06 14:29:50.320776', '1', 'AishTea Manis', 1, '[{\"added\": {}}]', 10, 1),
+(42, '2023-12-06 14:30:19.451690', '2', 'Fruit Tea Ice', 1, '[{\"added\": {}}]', 10, 1),
+(43, '2023-12-06 14:30:46.224214', '3', 'Es Teh Manis', 1, '[{\"added\": {}}]', 10, 1),
+(44, '2023-12-06 14:31:24.086791', '1', 'Roti Bakarta Cokelat', 1, '[{\"added\": {}}]', 11, 1),
+(45, '2023-12-06 14:31:38.983436', '2', 'Roti Bakarta Green Tea', 1, '[{\"added\": {}}]', 11, 1),
+(46, '2023-12-06 14:31:53.452943', '3', 'Roti Bakarta Keju', 1, '[{\"added\": {}}]', 11, 1);
 
 -- --------------------------------------------------------
 
@@ -320,6 +339,7 @@ INSERT INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
 (1, 'admin', 'logentry'),
 (10, 'AplikasiLayananUMKM', 'aishtea'),
 (7, 'AplikasiLayananUMKM', 'menu'),
+(11, 'AplikasiLayananUMKM', 'roti'),
 (9, 'AplikasiLayananUMKM', 'saguku'),
 (8, 'AplikasiLayananUMKM', 'wang'),
 (3, 'auth', 'group'),
@@ -368,7 +388,8 @@ INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
 (20, 'AplikasiLayananUMKM', '0002_menu_gambar', '2023-11-23 22:14:33.138763'),
 (21, 'AplikasiLayananUMKM', '0003_alter_menu_gambar', '2023-11-27 10:44:44.951780'),
 (22, 'AplikasiLayananUMKM', '0004_alter_menu_gambar', '2023-11-27 10:54:33.947477'),
-(23, 'AplikasiLayananUMKM', '0004_aishtea_saguku_wang', '2023-11-30 21:00:24.522552');
+(23, 'AplikasiLayananUMKM', '0004_aishtea_saguku_wang', '2023-11-30 21:00:24.522552'),
+(24, 'AplikasiLayananUMKM', '0002_aishtea_roti_saguku_wang_delete_menu', '2023-12-06 14:23:12.257013');
 
 -- --------------------------------------------------------
 
@@ -387,6 +408,7 @@ CREATE TABLE `django_session` (
 --
 
 INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
+('90azwwoysclvv5y6rk82e9w16hhlzan5', '.eJxVjDEOAiEURO9CbciHhQUs7T0D-cBHVg0ky25lvLuSbKHNFPPezIt53Lfi906rXxI7M8FOv13A-KA6QLpjvTUeW93WJfCh8IN2fm2JnpfD_Tso2Mt3jaQAEEBaMWVLs1FxhMxKg0JnaNIWgjM2R3LgMOYQpEbh5JTlrCN7fwDKrjdz:1rAsp6:LNXUDUijqx6zLRkxO75w6L3DH8Amncd32M2qRatRVV0', '2023-12-20 14:24:24.513565'),
 ('ssv9msk50sgs0248ovm7fi49zsowrkpj', '.eJxVjDEOAiEURO9CbciHhQUs7T0D-cBHVg0ky25lvLuSbKHNFPPezIt53Lfi906rXxI7M8FOv13A-KA6QLpjvTUeW93WJfCh8IN2fm2JnpfD_Tso2Mt3jaQAEEBaMWVLs1FxhMxKg0JnaNIWgjM2R3LgMOYQpEbh5JTlrCN7fwDKrjdz:1r6HzD:PGgwF7mH--621a7MlzFdj8k1TE14rW1EBxhB5dbyEGo', '2023-12-07 22:15:51.495629'),
 ('wh99bpn5fdqv8ng6fia3j9kps9taunr6', '.eJxVjDEOAiEURO9CbciHhQUs7T0D-cBHVg0ky25lvLuSbKHNFPPezIt53Lfi906rXxI7M8FOv13A-KA6QLpjvTUeW93WJfCh8IN2fm2JnpfD_Tso2Mt3jaQAEEBaMWVLs1FxhMxKg0JnaNIWgjM2R3LgMOYQpEbh5JTlrCN7fwDKrjdz:1r7ZIU:LVEdLr_3kCxabNhI0u2s9Kzmq0gnDTOOsHtK3LwkIEQ', '2023-12-11 10:57:02.027128');
 
@@ -398,25 +420,25 @@ INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALU
 -- Indexes for table `aplikasilayananumkm_aishtea`
 --
 ALTER TABLE `aplikasilayananumkm_aishtea`
-  ADD PRIMARY KEY (`menu_ptr_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `aplikasilayananumkm_menu`
+-- Indexes for table `aplikasilayananumkm_roti`
 --
-ALTER TABLE `aplikasilayananumkm_menu`
+ALTER TABLE `aplikasilayananumkm_roti`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `aplikasilayananumkm_saguku`
 --
 ALTER TABLE `aplikasilayananumkm_saguku`
-  ADD PRIMARY KEY (`menu_ptr_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `aplikasilayananumkm_wang`
 --
 ALTER TABLE `aplikasilayananumkm_wang`
-  ADD PRIMARY KEY (`menu_ptr_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `auth_group`
@@ -496,10 +518,28 @@ ALTER TABLE `django_session`
 --
 
 --
--- AUTO_INCREMENT for table `aplikasilayananumkm_menu`
+-- AUTO_INCREMENT for table `aplikasilayananumkm_aishtea`
 --
-ALTER TABLE `aplikasilayananumkm_menu`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+ALTER TABLE `aplikasilayananumkm_aishtea`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `aplikasilayananumkm_roti`
+--
+ALTER TABLE `aplikasilayananumkm_roti`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `aplikasilayananumkm_saguku`
+--
+ALTER TABLE `aplikasilayananumkm_saguku`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `aplikasilayananumkm_wang`
+--
+ALTER TABLE `aplikasilayananumkm_wang`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `auth_group`
@@ -517,7 +557,7 @@ ALTER TABLE `auth_group_permissions`
 -- AUTO_INCREMENT for table `auth_permission`
 --
 ALTER TABLE `auth_permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `auth_user`
@@ -541,41 +581,23 @@ ALTER TABLE `auth_user_user_permissions`
 -- AUTO_INCREMENT for table `django_admin_log`
 --
 ALTER TABLE `django_admin_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `django_content_type`
 --
 ALTER TABLE `django_content_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `django_migrations`
 --
 ALTER TABLE `django_migrations`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `aplikasilayananumkm_aishtea`
---
-ALTER TABLE `aplikasilayananumkm_aishtea`
-  ADD CONSTRAINT `AplikasiLayananUMKM__menu_ptr_id_a177081b_fk_AplikasiL` FOREIGN KEY (`menu_ptr_id`) REFERENCES `aplikasilayananumkm_menu` (`id`);
-
---
--- Constraints for table `aplikasilayananumkm_saguku`
---
-ALTER TABLE `aplikasilayananumkm_saguku`
-  ADD CONSTRAINT `AplikasiLayananUMKM__menu_ptr_id_5f839a2c_fk_AplikasiL` FOREIGN KEY (`menu_ptr_id`) REFERENCES `aplikasilayananumkm_menu` (`id`);
-
---
--- Constraints for table `aplikasilayananumkm_wang`
---
-ALTER TABLE `aplikasilayananumkm_wang`
-  ADD CONSTRAINT `AplikasiLayananUMKM__menu_ptr_id_48268b0b_fk_AplikasiL` FOREIGN KEY (`menu_ptr_id`) REFERENCES `aplikasilayananumkm_menu` (`id`);
 
 --
 -- Constraints for table `auth_group_permissions`
