@@ -50,3 +50,6 @@ class BaseMenuAdmin(admin.ModelAdmin):
         return format_html('<img src="{}" width=100 />',obj.gambar.url)
 
     display_image.short_description="Gambar"
+
+
+#tina melakukan perubahan
