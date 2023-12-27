@@ -12,7 +12,7 @@ class BaseMenu(models.Model):
 
     def __str__(self):
         return f"{self.nama_menu}"
-#inheritance atau pewarisan dari kelas base menu
+#inheritance atau pewarisan dari kelas base menu yg mana ini juga bisa menjadi polymorfism yaitu memungkinkan kelas-kelas turunan mewarisi fitur dari induk yaitu BaseMenu
 class Roti(BaseMenu):
     pass
 
