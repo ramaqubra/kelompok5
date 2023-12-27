@@ -12,7 +12,7 @@ class BaseMenu(models.Model):
 
     def __str__(self):
         return f"{self.nama_menu}"
-
+#inheritance atau pewarisan dari kelas base menu
 class Roti(BaseMenu):
     pass
 
