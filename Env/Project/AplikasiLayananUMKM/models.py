@@ -12,16 +12,22 @@ class BaseMenu(models.Model):
 
     def __str__(self):
         return f"{self.nama_menu}"
-#inheritance atau pewarisan dari kelas base menu yg mana ini juga bisa menjadi polymorfism yaitu memungkinkan kelas-kelas turunan mewarisi fitur dari induk yaitu BaseMenu
+#Inheritance
+#Pada bagian ini kita membuat class atau bidang-bidang lainnya dengan mewarisi sifat dari kelas induknya yakni BaseMenu.
+#Diikuti dengan pernyataan pass (pernyataan kosong dalam Python), yang mana meskipun kita tidak menambahkan kode apapun ke dalam definisi tiap class, 
+#tetapi secara efektif tiap-tiap class ini akan memiliki semua atribut dan metode yang telah didefinisikan dalam kelas induknya.
 class Roti(BaseMenu):
     pass
 
 # Ngawal Muhamad_E1E122129
 class AishTea(BaseMenu):
     pass
-
+#Polymorphism *
+#Pada bagian ini, kita mengganti perilaku metode __str__, sehingga walaupun dengan metode yang sama (__str__), 
+#kita dapat memiliki implementasi yang berbeda dengan metode pada kelas induknya ataupun kelas-kelas lainnya.
 class Saguku(BaseMenu):
-    pass
+    def __str__(self):
+        return f"saguku: {self.nama_menu}, harga: {self.harga}"
 
 class Wang(BaseMenu):
     pass
