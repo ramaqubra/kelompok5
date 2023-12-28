@@ -22,12 +22,9 @@ class Roti(BaseMenu):
 # Ngawal Muhamad_E1E122129
 class AishTea(BaseMenu):
     pass
-#Polymorphism *
-#Pada bagian ini, kita mengganti perilaku metode __str__, sehingga walaupun dengan metode yang sama (__str__), 
-#kita dapat memiliki implementasi yang berbeda dengan metode pada kelas induknya ataupun kelas-kelas lainnya.
+
 class Saguku(BaseMenu):
-    def __str__(self):
-        return f"saguku: {self.nama_menu}, harga: {self.harga}"
+    pass
 
 class Wang(BaseMenu):
     pass
